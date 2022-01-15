@@ -11,7 +11,7 @@ struct CustomizeMenuView: View {
     let drink: Drink
     @EnvironmentObject var menu: Menu
     @EnvironmentObject var history: History
-    
+    var dismiss: () -> Void
     @State private var size = 0
     @State private var isDecaf = false
     @State private var extraShots = 0
@@ -91,6 +91,7 @@ struct CustomizeMenuView: View {
         .toolbar {
             Button("Save") {
                 history.add(drink, size: sizeOption[size], extraShots: extraShots, isDecaf: isDecaf, milk: milk, syrup: syrup, caffeine: caffeine, calories: calories)
+                dismiss()
             }
         }
     }
@@ -98,7 +99,7 @@ struct CustomizeMenuView: View {
 
 struct CustomizeMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomizeMenuView(drink: Drink.example)
+        CustomizeMenuView(drink: Drink.example) { }
             .environmentObject(Menu())
     }
 }
