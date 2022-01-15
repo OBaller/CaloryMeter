@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var menu = Menu()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        MenuView()
+            .environmentObject(menu)
     }
 }
 

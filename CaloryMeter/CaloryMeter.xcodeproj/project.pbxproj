@@ -15,6 +15,7 @@
 		B4AB5CC22792CFED00175263 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CC12792CFEB00175263 /* Drink.swift */; };
 		B4AB5CC42792D0F300175263 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CC32792D0F300175263 /* MenuSection.swift */; };
 		B4AB5CC62792D4F400175263 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CC52792D4F400175263 /* Menu.swift */; };
+		B4AB5CC82792DFE200175263 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CC72792DFE200175263 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B4AB5CC12792CFEB00175263 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		B4AB5CC32792D0F300175263 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		B4AB5CC52792D4F400175263 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		B4AB5CC72792DFE200175263 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B4AB5CC12792CFEB00175263 /* Drink.swift */,
 				B4AB5CC32792D0F300175263 /* MenuSection.swift */,
 				B4AB5CC52792D4F400175263 /* Menu.swift */,
+				B4AB5CC72792DFE200175263 /* MenuView.swift */,
 				B4AB5CB52790B89E00175263 /* Preview Content */,
 			);
 			path = CaloryMeter;
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4AB5CB22790B89500175263 /* ContentView.swift in Sources */,
+				B4AB5CC82792DFE200175263 /* MenuView.swift in Sources */,
 				B4AB5CC22792CFED00175263 /* Drink.swift in Sources */,
 				B4AB5CC42792D0F300175263 /* MenuSection.swift in Sources */,
 				B4AB5CB02790B89500175263 /* CaloryMeterApp.swift in Sources */,
