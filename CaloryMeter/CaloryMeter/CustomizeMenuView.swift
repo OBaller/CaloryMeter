@@ -9,17 +9,39 @@ import SwiftUI
 
 struct CustomizeMenuView: View {
     let drink: Drink
+    @EnvironmentObject var menu: Menu
     
-    @State var size = 0
-    @State var isDecaf = false
+    @State private var size = 0
+    @State private var isDecaf = false
+    @State private var extraShots = 0
+    @State private var milk = ConfigurationOption.none
+    @State private var syrup = ConfigurationOption.none
+    
     let sizeOption = ["Small", "Medium", "Large"]
     
     var caffeine: Int {
-        100
+        var caffeineAmount = drink.caffeine[size]
+        caffeineAmount += (extraShots * 60)
+        
+        if isDecaf {
+            caffeineAmount /= 20
+        }
+        return caffeineAmount
     }
     
     var calories: Int {
-        100
+        var calorieAmount = drink.baseCalories
+        calorieAmount += extraShots * 10
+        
+        if drink.coffeeBased {
+            calorieAmount += milk.calories
+        }
+        else {
+            calorieAmount += milk.calories / 8
+        }
+        calorieAmount += syrup.calories
+        
+        return calorieAmount * (size + 1)
     }
     
     var body: some View {
@@ -32,8 +54,31 @@ struct CustomizeMenuView: View {
                 }
                 .pickerStyle(.segmented)
                 
+                if drink.coffeeBased {
+                    Stepper("Extra Shots: \(extraShots)", value: $extraShots, in: 0...8)
+                }
+                
                 Toggle("Decaffeinated", isOn: $isDecaf )
             }
+            
+            Section("Customization") {
+                Picker("Milk", selection: $milk) {
+                    ForEach(menu.milkOptions) { option in
+                        Text(option.name)
+                            .tag(option)
+                    }
+                }
+                
+                if drink.coffeeBased {
+                    Picker("Syrup", selection: $syrup) {
+                        ForEach(menu.syrupOptions) { option in
+                            Text(option.name)
+                                .tag(option)
+                        }
+                    }
+                }
+            }
+            
             
             Section("Estimates") {
                  Text("**Caffeine:** \(caffeine)mg")
@@ -48,5 +93,6 @@ struct CustomizeMenuView: View {
 struct CustomizeMenuView_Previews: PreviewProvider {
     static var previews: some View {
         CustomizeMenuView(drink: Drink.example)
+            .environmentObject(Menu())
     }
 }
