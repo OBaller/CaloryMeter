@@ -18,6 +18,9 @@
 		B4AB5CC82792DFE200175263 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CC72792DFE200175263 /* MenuView.swift */; };
 		B4AB5CCA2793059600175263 /* CustomizeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CC92793059600175263 /* CustomizeMenuView.swift */; };
 		B4AB5CCC2793280000175263 /* ConfigurationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CCB279327FE00175263 /* ConfigurationOption.swift */; };
+		B4AB5CCE27936BDA00175263 /* Serving.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CCD27936BD900175263 /* Serving.swift */; };
+		B4AB5CD027936D6700175263 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CCF27936D6600175263 /* FileManager-DocumentsDirectory.swift */; };
+		B4AB5CD227936E9F00175263 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB5CD127936E9F00175263 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		B4AB5CC72792DFE200175263 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B4AB5CC92793059600175263 /* CustomizeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeMenuView.swift; sourceTree = "<group>"; };
 		B4AB5CCB279327FE00175263 /* ConfigurationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationOption.swift; sourceTree = "<group>"; };
+		B4AB5CCD27936BD900175263 /* Serving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serving.swift; sourceTree = "<group>"; };
+		B4AB5CCF27936D6600175263 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		B4AB5CD127936E9F00175263 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 				B4AB5CC72792DFE200175263 /* MenuView.swift */,
 				B4AB5CC92793059600175263 /* CustomizeMenuView.swift */,
 				B4AB5CCB279327FE00175263 /* ConfigurationOption.swift */,
+				B4AB5CCD27936BD900175263 /* Serving.swift */,
+				B4AB5CCF27936D6600175263 /* FileManager-DocumentsDirectory.swift */,
+				B4AB5CD127936E9F00175263 /* History.swift */,
 				B4AB5CB52790B89E00175263 /* Preview Content */,
 			);
 			path = CaloryMeter;
@@ -162,11 +171,14 @@
 				B4AB5CB22790B89500175263 /* ContentView.swift in Sources */,
 				B4AB5CC82792DFE200175263 /* MenuView.swift in Sources */,
 				B4AB5CC22792CFED00175263 /* Drink.swift in Sources */,
+				B4AB5CD227936E9F00175263 /* History.swift in Sources */,
 				B4AB5CCA2793059600175263 /* CustomizeMenuView.swift in Sources */,
 				B4AB5CC42792D0F300175263 /* MenuSection.swift in Sources */,
 				B4AB5CCC2793280000175263 /* ConfigurationOption.swift in Sources */,
+				B4AB5CD027936D6700175263 /* FileManager-DocumentsDirectory.swift in Sources */,
 				B4AB5CB02790B89500175263 /* CaloryMeterApp.swift in Sources */,
 				B4AB5CC62792D4F400175263 /* Menu.swift in Sources */,
+				B4AB5CCE27936BDA00175263 /* Serving.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
