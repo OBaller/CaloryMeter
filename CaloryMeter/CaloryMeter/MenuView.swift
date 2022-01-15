@@ -20,6 +20,11 @@ struct MenuView: View {
                         Section {
                             ForEach(section.drinks) { drink in
                                 VStack {
+                                    Image(drink.image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .cornerRadius(10 )
+                                    
                                     Text(drink.name)
                                         .font(.system(.body, design: .serif))
                                     
