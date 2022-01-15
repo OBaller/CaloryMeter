@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomizeMenuView: View {
     let drink: Drink
     @EnvironmentObject var menu: Menu
+    @EnvironmentObject var history: History
     
     @State private var size = 0
     @State private var isDecaf = false
@@ -87,6 +88,11 @@ struct CustomizeMenuView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarTitle(drink.name)
+        .toolbar {
+            Button("Save") {
+                history.add(drink, size: sizeOption[size], extraShots: extraShots, isDecaf: isDecaf, milk: milk, syrup: syrup, caffeine: caffeine, calories: calories)
+            }
+        }
     }
 }
 
